@@ -14,11 +14,11 @@ import Tab from '@mui/material/Tab';
 const HeaderOptions = () => {
   const [value, setValue] = useState(0);
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
+  const handleChange = (event, number) => {
+    setValue(number);
   };
 
-  const [hovered, setHovered] = useState<number | null>(null);
+  const [hovered, setHovered] = useState(0);
   const circleOptions = [
     {
       logo: BlogIcon,
@@ -74,7 +74,7 @@ const HeaderOptions = () => {
         <Box
           key={key}
           onMouseEnter={() => setHovered(key)}
-          onMouseLeave={() => setHovered(null)}
+          onMouseLeave={() => setHovered(0)}
           sx={{
             height: 'auto',
             width: 'auto',

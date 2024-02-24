@@ -10,7 +10,6 @@ import { NavLink } from 'react-router-dom';
 import ListItem from '@mui/material/ListItem';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
-import Logo from '../../assets/pictures/';
 import '../../navlink.css';
 import '../../index.css';
 import { Outlet } from 'react-router-dom';
@@ -22,7 +21,7 @@ const navItems = [
 
 ];
 
-export default function NavBar() {
+function Navbar() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
@@ -34,7 +33,7 @@ export default function NavBar() {
       onClick={handleDrawerToggle}
       sx={{ textAlign: 'center', backgroundColor: 'primary.main' }}
     >
-      <img src={Logo} alt='yooo' style={{ height: '150px', width: '150px' }} />
+      
       
       <List sx={{ backgroundColor: 'primary.main' }}>
         {navItems.map((item) => (
@@ -83,7 +82,7 @@ export default function NavBar() {
                 lg: '0px',
                 xl: '0px',
               },
-              backgroundImage: `url(${Logo})`,
+              
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
@@ -166,3 +165,7 @@ export default function NavBar() {
     </Box>
   );
 }
+
+
+export default Navbar()
+

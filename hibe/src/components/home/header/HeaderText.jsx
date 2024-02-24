@@ -3,8 +3,8 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { MyNormalButton } from '../../styledComponents';
 
-const HeaderText = (props) => {
-  console.log(props.headerOption);
+const HeaderText = () => {
+
   return (
     <Box
       sx={{
