@@ -1,0 +1,5 @@
+@font-face {
+  font-family: 'Birds';
+  src: local('Birds'),
+    url(../src/assets/fonts/Roboto-Regular.ttf) format('truetype');
+}
