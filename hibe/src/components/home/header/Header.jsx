@@ -4,8 +4,8 @@ import HeaderImg from './HeaderImg';
 import HeaderOptions from './HeaderOptions';
 import Box from '@mui/material/Box';
 
-const Header = (props) => {
-  console.log('gooo', props.HomeOptions)
+const Header = () => {
+
   return (
     <Box
       sx={{
@@ -62,8 +62,8 @@ const Header = (props) => {
           },
         }}
       >
-        <HeaderText headerOption={props.HomeOptions}/>
-        <HeaderImg headerOption={props.HomeOptions}/>
+        <HeaderText />
+        <HeaderImg />
       </Box>
       <HeaderOptions />
     </Box>

@@ -1,23 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import Header from './header/Header';
-import client from '../../sanityClient';
 
-const query = '*[_type == "home"][0]';
+
+
 
 const Home = () => {
-  const [homeOptions, setHomeOptions] = useState([]);
 
-  useEffect(() => {
-    client
-      .fetch(query, {})
-      .then((queryResponse) => {
-        setHomeOptions(queryResponse);
-      })
-      .catch(console.error);
-  }, []);
-
-  console.log('query', homeOptions);
 
   return (
     <Box
@@ -37,7 +26,7 @@ const Home = () => {
         justifyContent: 'center',
       }}
     >
-      <Header HomeOptions={homeOptions} />
+      <Header />
     </Box>
   );
 };
